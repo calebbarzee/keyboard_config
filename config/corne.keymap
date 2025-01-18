@@ -7,6 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/backlight.h>
 
 // tell zmk how many LEDs are on one board
 &led_strip {
@@ -33,25 +35,25 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
 // | CTRL |  F6 |  F7 |  F8 |  F9 | F10 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |  F1 |  F2 |  F3 |  F4 |  F5 |   |     |     |     |     |     |      |
+// | SHFT |  F1 |  F2 |  F3 |  F4 |  F5 |   |     |     |     |     |     | L_CY |
 //                    | ALT | HYP | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp TAB    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
    &kp LCTRL  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &trans   &trans   &trans &trans    &trans &trans
+   &kp LSHFT  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &trans   &trans   &trans &trans    &trans &RGB_EFF
                           &kp LALT &kp LGUI &kp SPACE   &kp RET  &trans   &kp RALT
                         >;
                 };
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  {  |   |  }  |  ^  |  &  |  *  |  %  | BSPC |
-// | CTRL | RGB | BR+ | BR- | EF+ |  (  |   |  )  |  -  |  +  |  =  |  \  | "|"  |
-// | BTCLR| BT1 | BT2 | BT3 |     |  [  |   |  ]  |  _  |  ^  |  ~  |  `  |      |
+// | CTRL | LED | LED | BR- | BR+ |  (  |   |  )  |  -  |  +  |  =  |  \  | "|"  |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 |  [  |   |  ]  |  _  |  ^  |  ~  |  `  |      |
 //                    | ALT | HYP | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp TAB   &kp EXCL  &kp AT    &kp HASH  &kp DLLR &kp LBRC   &kp RBRC  &kp CARET &kp AMPS  &kp STAR  &kp PRCNT &kp BSPC
-   &kp LCTRL &rgb_ug_toggle &rgb_ug_bri_inc &rgb_ug_bri_dec &rgb_ug_eff &kp LPAR   &kp RPAR  &kp MINUS &kp PLUS  &kp EQUAL &kp BSLH  &kp PIPE
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &kp LBKT  &kp RBKT  &kp UNDER &kp CARET &kp TILDE &kp GRAVE &trans
+   &kp LCTRL &BL_TOG &RGB_TOG &RGB_BRD &RGB_BRI &kp LPAR   &kp RPAR  &kp MINUS &kp PLUS  &kp EQUAL &kp BSLH  &kp PIPE
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &BT_SEL 3 &kp LBKT  &kp RBKT  &kp UNDER &kp CARET &kp TILDE &kp GRAVE &trans
                              &kp LALT &kp LGUI &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
