@@ -53,7 +53,7 @@
                         bindings = <
    &kp TAB   &kp EXCL  &kp AT    &kp HASH  &kp DLLR &kp LBRC   &kp RBRC  &kp CARET &kp AMPS  &kp STAR  &kp PRCNT &kp BSPC
    &kp LCTRL &bl BL_TOG &rgb_ug RGB_TOG &rgb_ug RGB_BRD &rgb_ug RGB_BRI &kp LPAR   &kp RPAR  &kp MINUS &kp PLUS  &kp EQUAL &kp BSLH  &kp PIPE
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &BT_SEL 3 &kp LBKT  &kp RBKT  &kp UNDER &kp CARET &kp TILDE &kp GRAVE &trans
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp LBKT  &kp RBKT  &kp UNDER &kp CARET &kp TILDE &kp GRAVE &trans
                              &kp LALT &kp LGUI &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
