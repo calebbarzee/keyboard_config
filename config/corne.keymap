@@ -15,6 +15,14 @@
     chain-length = <21>;
 };
 
+// tell zmk what nodes in the device tree the LED settings apply to
+/ {
+    chosen {
+        zmk,underglow = &led_strip;
+        zmk, backlight= &backlight;
+    };
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
