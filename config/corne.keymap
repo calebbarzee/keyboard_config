@@ -35,26 +35,26 @@ keymap {
     compatible = "zmk,keymap";
     default_layer {
         bindings = <
-        &kp TAB &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I &kp O &kp P &kp BSPC
-        &kp ESC &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K &kp L &kp SEMI &kp SQT
-        &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RALT
-                    &kp LCTRL &kp LGUI &kp SPACE   &kp RET &mo 1 &mo 2
+             &kp TAB      &kp Q      &kp W      &kp E      &kp R      &kp T        &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
+             &kp ESC      &kp A      &kp S      &kp D      &kp F      &kp G        &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SQT
+             &kp LSHFT    &kp Z      &kp X      &kp C      &kp V      &kp B        &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RALT
+                            &kp LCTRL      &kp LGUI      &kp SPACE        &kp RET      &mo 1      &mo 2
         >;
     };
     lower_layer {
         bindings = <
-        &kp TAB  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BSPC
-        &kp ESC  &trans &trans &trans &trans &trans   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-        &kp LSHFT &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &kp RALT
-                    &kp LCTRL &kp LGUI &kp SPACE   &kp RET  &trans   &bt BT_SEL 0
+             &kp TAB       &kp N1      &kp N2      &kp N3      &kp N4      &kp N5        &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp BSPC
+             &kp ESC       &trans      &trans      &trans      &trans      &trans        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
+             &kp LSHFT     &trans      &trans      &trans      &trans      &trans        &trans      &trans      &trans      &trans      &trans      &kp RALT
+                         &kp LCTRL      &kp LGUI      &kp SPACE        &kp RET       &trans        &bt BT_SEL 0
         >;
     };
     raise_layer {
         bindings = <
-        &kp F1  &kp F2  &kp F3  &kp F4 &kp F5 &kp LBRC &kp    RBRC &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
-        &kp ESC &kp TILDE &kp GRAVE &trans &kp UNDER &kp LBKT    &kp RBKT  &kp MINUS &kp PLUS &kp EQUAL &kp BSLH &kp PIPE
-        &kp SHFT &trans &trans &trans &trans &kp LBPAR   &kp RPAR  &kp LT &kp GT &trans &bt BT_CLR
-                    &kp LALT &kp LGUI &kp SPACE   &kp RET &bt BT_SEL 1  &kp trans
+             &kp F1       &kp F2      &kp F3     &kp F4      &kp F5      &kp LBRC         &kp RBRC      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10
+             &kp ESC      &kp TILDE   &kp GRAVE  &trans      &kp UNDER   &kp LBKT         &kp RBKT      &kp MINUS   &kp PLUS    &kp EQUAL   &kp BSLH    &kp PIPE
+             &kp SHFT     &trans      &trans      &trans     &trans      &kp LBPAR        &kp RPAR      &kp LT      &kp GT      &trans      &trans      &bt BT_CLR
+                         &kp LALT      &kp LGUI      &kp SPACE        &kp RET      &bt BT_SEL 1    &kp trans
             >;
         };
     };
