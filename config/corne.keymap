@@ -54,7 +54,7 @@ keymap {
              &kp F1       &kp F2      &kp F3     &kp F4     &kp F5      &kp LBRC         &kp RBRC      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10
              &kp ESC      &kp TILDE   &kp GRAVE  &trans     &kp UNDER   &kp LBKT         &kp RBKT      &kp MINUS   &kp PLUS    &kp EQUAL   &kp BSLH    &kp PIPE
              &kp LSHFT    &trans      &trans     &trans     &trans      &kp LPAR         &kp RPAR      &kp LT      &kp GT      &trans      &trans      &bt BT_CLR
-                         &kp LALT      &kp LGUI      &kp SPACE        &kp RET      &bt BT_SEL 1    &kp trans
+                         &kp LALT      &kp LGUI      &kp SPACE        &kp RET      &bt BT_SEL 1    &trans
             >;
         };
     };
