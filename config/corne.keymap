@@ -13,22 +13,22 @@
 // ----------------------------------------------------------------------------------------
 // | TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
 // | ESC  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ALT  |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | RALT |
 //                    |CTRL | HYP | SPC |   | ENT | LWR  | RSE |
 // -----------------------------------------------------------------------------------------
 // MOD 1 : LOWER
 // -----------------------------------------------------------------------------------------
-// | TAB  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-// | ESC  |  ~  |  `  |     |  _  |  [  |   |  ]  |  -  |  +  |  =  |  \  |  |   |
-// | SHFT |     |     |     |     |  (  |   |  )  |  <  |  >  |  /  |     |  ALT |
-//                    |CTRL | HYP | SPC |   | ENT |     | BT1 |
+// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
+// | ESC  |  ~  |  `  |  _  |  {  |  [  |   |  ]  |  }  |  -  |  +  |  =  |  |   |
+// | SHFT |     |     |     |     |  (  |   |  )  |  <  |  >  |     |     |  \   |
+//                    |     |     |     |   |     |     | BT1 |
 // -----------------------------------------------------------------------------------------
 // MOD 2 : RAISE 
 // -----------------------------------------------------------------------------------------
-// |  F1  |  F2 |  F3 |  F4 |  F5 |  {  |   |  }  |  F6 |  F7 |  F8 |  F9 | F10  |
+// |      | F1  |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 |      |
 // | ESC  |     |     |     |     |     |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     | LED | BTCLR|
-//                    |CTRL | HYP | SPC |   | ENT | BT2 |     |
+//                    | LALT|     |     |   |     | BT2 |     |
 
 / {
 keymap {
@@ -43,18 +43,18 @@ keymap {
     };
     lower_layer {
         bindings = <
-             &kp TAB       &kp N1      &kp N2      &kp N3      &kp N4      &kp N5        &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp BSPC
-             &kp ESC      &kp TILDE   &kp GRAVE  &trans     &kp UNDER   &kp LBKT         &kp RBKT      &kp MINUS   &kp PLUS    &kp EQUAL   &kp BSLH    &kp PIPE
-             &kp LSHFT    &trans      &trans     &trans     &trans      &kp LPAR         &kp RPAR      &kp LT      &kp GT      &trans      &trans      &kp RALT
-                         &kp LCTRL      &kp LGUI      &kp SPACE        &kp RET       &trans        &bt BT_SEL 0
+             &trans       &kp N1      &kp N2      &kp N3      &kp N4     &kp N5         &kp N6        &kp N7      &kp N8      &kp N9      &kp N0       &trans
+             &kp ESC      &kp TILDE   &kp GRAVE   &kp UNDER   &kp LBRC   &kp LBKT       &kp RBKT      &kp RBRC    &kp MINUS   &kp PLUS    &kp EQUAL    &kp PIPE
+             &kp LSHFT    &trans      &trans      &trans      &trans     &kp LPAR       &kp RPAR      &kp LT      &kp GT      &trans      &trans       &kp BSLH
+                            &trans      &trans      &trans        &trans       &trans        &bt BT_SEL 0
         >;
     };
     raise_layer {
         bindings = <
-             &kp F1       &kp F2      &kp F3     &kp F4     &kp F5      &kp LBRC         &kp RBRC      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10
-             &kp ESC       &trans      &trans      &trans      &trans      &trans        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
-             &kp LSHFT     &trans      &trans      &trans      &trans      &trans        &trans      &trans      &trans      &trans      &trans      &bt BT_CLR
-                         &kp LALT      &kp LGUI      &kp SPACE        &kp RET      &bt BT_SEL 1    &trans
+             &trans       &kp F1       &kp F2      &kp F3     &kp F4      &kp F5         &kp F6        &kp F7      &kp F8      &kp F9      &kp F10     &trans
+             &kp ESC      &trans      &trans      &trans      &trans      &trans         &kp LEFT      &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
+             &kp LSHFT    &trans      &trans      &trans      &trans      &trans         &trans        &trans      &trans      &trans      &trans      &bt BT_CLR
+                            &kp LALT      &trans      &trans      &trans        &trans      &bt BT_SEL 1    &trans
             >;
         };
     };
