@@ -12,7 +12,7 @@
 
 
 &led_strip {
-    chain-length = <27>;
+    chain-length = <6>;
 };
 
 // -----------------------------------------------------------------------------------------
@@ -26,8 +26,8 @@
 // MOD 1 : LOWER
 // -----------------------------------------------------------------------------------------
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
-// |      |  ~  |  `  |  _  |  {  |  [  |   |  ]  |  }  |  -  |  +  |  =  |  |   |
-// | LALT |     |     |     |     |  (  |   |  )  |     |  <  |  >  |     |  \   |
+// | LALT |  ~  |  `  |  _  |  {  |  [  |   |  ]  |  }  |  -  |  +  |  =  |  |   |
+// |      |     |     |     |     |  (  |   |  )  |     |  <  |  >  |  \  |      |
 //                    |     |     |     |   |     |     | BT1 |
 // -----------------------------------------------------------------------------------------
 // MOD 2 : RAISE 
@@ -51,8 +51,8 @@ keymap {
     lower_layer {
         bindings = <
              &trans       &kp N1      &kp N2      &kp N3      &kp N4     &kp N5         &kp N6        &kp N7      &kp N8      &kp N9      &kp N0       &trans
-             &trans       &kp TILDE   &kp GRAVE   &kp UNDER   &kp LBRC   &kp LBKT       &kp RBKT      &kp RBRC    &kp MINUS   &kp PLUS    &kp EQUAL    &kp PIPE
-             &kp LALT     &trans      &trans      &trans      &trans     &kp LPAR       &kp RPAR      &trans      &kp LT      &kp GT      &trans       &kp BSLH
+             &kp LALT       &kp TILDE   &kp GRAVE   &kp UNDER   &kp LBRC   &kp LBKT       &kp RBKT      &kp RBRC    &kp MINUS   &kp PLUS    &kp EQUAL    &kp PIPE
+             &trans     &trans      &trans      &trans      &trans     &kp LPAR       &kp RPAR      &trans      &kp LT      &kp GT      &kp BSLH     &trans
                             &trans      &trans      &trans        &trans       &trans        &bt BT_SEL 0
         >;
     };
