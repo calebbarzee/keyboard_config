@@ -32,7 +32,7 @@
 // |      |     |     |     |     |     |   | LFT | DWN |  UP | RGT |     |      |
 // | EXT_PWR | OUT_USB | OUT_BT | BT0 | BT1 | BT2 |   | RGB_TOG | RGB_EFF | RGB_BRD | RGB_BRI |     | BTCLR|
 //                    |     |     |     |   |     |     |     |
-
+// TODO: add media keys on shift with mod2 function keys
 / {
 keymap {
     compatible = "zmk,keymap";
