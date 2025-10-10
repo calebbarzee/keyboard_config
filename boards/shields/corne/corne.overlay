@@ -1,3 +1,8 @@
+/*
+ * Corne v3 RGB Override
+ * This overrides the default corne shield to support per-key RGB
+ */
+
 #include <dt-bindings/led/led.h>
 
 &pinctrl {
@@ -27,10 +32,20 @@
         compatible = "worldsemi,ws2812-spi";
         reg = <0>;
         spi-max-frequency = <4000000>;
-        chain-length = <27>; // 21 small + 6 large LEDs per side
+        
+        /* 
+         * Corne v3: 27 LEDs per side
+         * 1-6: Underglow (WS2812, GRB)
+         * 7-27: Per-key (SK6812-MINI-E, RGB)
+         * 
+         * NOTE: We can only use one color-mapping for the entire chain.
+         */
+        chain-length = <27>;
+        
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
-        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
+        
+        color-mapping = <LED_COLOR_ID_RED LED_COLOR_ID_GREEN LED_COLOR_ID_BLUE>;
     };
 };
 
